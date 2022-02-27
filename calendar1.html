@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: system;
+        font-style: normal;
+        font-weight: 300;
+        src: local(".SFNSText-Light"),
+          local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"),
+          local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"),
+          local("DroidSans"), local("Tahoma");
+      }
+
+      :root {
+        --dark: #F3F4F6;
+        --soft: #D3DBE5;
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: system;
+      }
+
+      body {
+        max-width: 500px;
+        max-height: 500px;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #EAEDF2;
+      }
+
+      table {
+        border-spacing: 0;
+        table-layout: fixed; /* Space divided equally*/
+        width: 100%;
+        background-color: var(--dark);
+      }
+
+      th {
+        padding: 20px 0;
+        width: calc(400px / 7);
+      }
+
+      td {
+        height: calc(320px / 6);
+        border-radius: 1rem;
+        vertical-align: middle;
+        border: 5px solid var(--dark);
+
+      }
+
+      table tr:first-child {
+        color: var(--soft);
+        background-color: white;
+      }
+
+      .other {
+        color: var(--soft);
+      }
+
+      .spacer {
+        height: 20px;
+      }
+
+      td:hover {
+        background-color: #F5374C;
+        color: white;
+        font-weight: bold;
+      }
+
+      .top-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        border-radius: 3rem 3rem 0rem 0;
+      }
+
+      select {
+        background-color: var(--dark);
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        border-radius: 3rem;
+        border-style: none;
+      }
+
+      .bottom-container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: var(--dark);
+        border-radius: 0 0 2rem 2rem;
+      }
+
+      #leftBtn {
+        background-color: var(--dark);
+        border-style: none;
+        padding: 1rem 3rem;
+        margin: 1rem 0;
+        border-radius: 3rem;
+      }
+
+
+      #rightBtn {
+        background-color: #2752FF;
+        color: white;
+        border-style: none;
+        padding: 1rem 3rem;
+        margin: 1rem 0;
+        border-radius: 3rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="top-container">
+      <select name="months" id="months">
+        <option value="january">Jan</option>
+        <option value="february">Feb</option>
+        <option value="march">Mar</option>
+        <option value="april">Apr</option>
+        <option value="may">May</option>
+        <option value="june">Jun</option>
+        <option value="july">Jul</option>
+        <option value="august">Aug</option>
+        <option value="september">Sep</option>
+        <option value="october">Oct</option>
+        <option value="november">Nov</option>
+        <option value="december">Dec</option>
+      </select>
+      <select name="years" id="years">
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+      </select>
+    </div>
+    <table>
+      <tr>
+        <th>M</th>
+        <th>T</th>
+        <th>W</th>
+        <th>T</th>
+        <th>F</th>
+        <th>S</th>
+        <th>S</th>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr>
+        <td class="other">31</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td class="other">1</td>
+        <td class="other">2</td>
+        <td class="other">3</td>
+        <td class="other">4</td>
+        <td class="other">5</td>
+        <td class="other">6</td>
+      </tr>
+    </table>
+    <div class="bottom-container">
+      <button type="button" id="leftBtn">Back</button>
+      <button type="button" id="rightBtn">Apply</button>
+    </div>
+  </body>
+</html>
