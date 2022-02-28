@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Plan</title>
+    <script src="https://kit.fontawesome.com/d50e5398b7.js" crossorigin="anonymous"></script>
+    <style>
+
+        * {
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F9F9F9;
+            width: 100vw;
+        }
+
+        :root.light {
+            --bgcolor: #FFFFFF;
+            --bullet: black;
+        }
+
+        :root.dark {
+            color: white;
+            --bgcolor: black;
+            --bullet: white;
+        }
+
+        .container {
+            box-shadow: 2px 2px 3px black;
+            padding: 1rem;
+            width: 30%;
+            height: 50%;
+            margin: 0 auto;
+            background-color: var(--bgcolor);
+        }
+
+        h1+p {
+            color: #AFABAA;
+        }
+
+        .today {
+            background-color: #F89DAC;
+            height: 100px;
+            color: white;
+            padding: 10px;
+        }
+
+        .today p {
+            font-size: .8rem;
+        }
+        
+        div+p {
+            font-size: .8rem;
+            color: #AFABAA;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        ul li::before{
+            content: "\2022";
+            color: var(--bullet);
+        }
+
+        ul li:first-child::before{
+            content: "\2022";
+            color:#F89DAC;
+        }
+
+        li p:last-child {
+            color: #AFABAA;
+            font-size: .8rem;
+        }
+
+        button {
+            margin: 0 auto;
+            border-style: none;
+            padding: 1rem 2rem;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome Back</h1>
+        <p>Calendar Plan</p>
+        <hr>
+        <div class="today">
+            <p>Today</p>
+            <span>22nd April 2018</span>
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <p>Upcoming Events</p>
+        <ul>
+            <li>
+                <span>10:30 am</span>
+                <p>Monday briefing with the team</p>
+            </li>
+            <li>
+                <span>12:00 pm</span>
+                <p>Lunch with the besties</p>
+            </li>
+            <li>
+                <span>13:00 pm</span>
+                <p>Meet with the client for that final design @foofinder</p>
+            </li>
+            <li>
+                <span>14:30</span>
+                <p>Plan event night to inspire students</p>
+            </li>
+            <li>
+                <span>15:30</span>
+                <p>Add some more events to the calendar</p>
+            </li>
+        </ul>
+    </div>
+    <button type="button">Toggle Theme</button>
+    <script>
+        const btn = document.querySelector("button");
+        const root = document.querySelector("html");
+        dark = false;
+        btn.addEventListener("click", ()=> {
+            if(!dark){
+                root.className="dark";
+                dark = !dark;
+            } else {
+                root.className="light";
+                dark = !dark;
+            }
+
+        })
+    </script>
+
+</body>
+</html>
