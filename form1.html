@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form1</title>
+    <style>
+      @font-face {
+        font-family: system;
+        font-style: normal;
+        font-weight: 300;
+        src: local(".SFNSText-Light"),
+          local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"),
+          local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"),
+          local("DroidSans"), local("Tahoma");
+      }
+
+      * {
+          box-sizing: border-box;
+      }
+
+      body {
+          background-color: black;
+          font-family: system;
+          font-size: 16px;
+      }
+
+      form {
+        background-color: #15172B;
+        color: white;
+        padding: 1rem;
+        width: 250px;
+        margin: 0 auto;
+        border-radius: .5rem;
+      }
+
+      input {
+          background-color: #303245;
+          width: 200px;
+          margin-bottom: 2rem;
+          height: 2rem;
+          border: none;
+          border-radius: .5rem;
+      }
+
+      button {
+          border: none;
+          background-color: #3088DD;
+          text-align: center;
+          width: 200px;
+          height: 2rem;
+          border-radius: .5rem;
+          color: white;
+      }
+
+
+    </style>
+  </head>
+  <body>
+      <form action="#" method="post">
+          <h1>Welcome</h1>
+          <p>Let's create your account!</p>
+          <input type="text" name="first_name" id="first" placeholder="First name">
+          <input type="text" name="last_name" id="last" placeholder="Last name">
+          <input type="email" name="email" id="email" placeholder="Email">
+          <button type="submit">submit</button>
+      </form>
+  </body>
+</html>
